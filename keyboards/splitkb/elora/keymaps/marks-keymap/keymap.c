@@ -44,6 +44,9 @@ enum layers {
 #define CTL_MINS MT(MOD_RCTL, KC_MINUS)
 #define ALT_ENT  MT(MOD_LALT, KC_ENT)
 
+#define LBRACKETS MT(DE_LCBR, DE_LBRC)
+#define RBRACKETS MT(DE_RCBR, DE_RBRC)
+
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
 // produces the key `tap` when tapped (i.e. pressed and released).
@@ -74,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_ESC  , KC_1 ,  KC_2   ,  KC_3  ,   KC_4 ,   KC_5 ,          KC_LSFT,     KC_RSFT,          KC_6     ,  KC_7 , KC_8 ,   KC_9   ,KC_0   , KC_DEL,
       KC_TAB  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,          KC_LCTL,     KC_RCTL,          KC_Y     ,  KC_U , KC_I ,   KC_O   ,KC_P   , KC_BSPC,
       KC_LSFT , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,          KC_LALT,     KC_RALT,          KC_H     ,  KC_J , KC_K ,   KC_L   ,KC_SCLN, KC_RSFT,
-      KC_LCTL , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B ,  KC_LBRC,KC_RALT,     FKEYS  , KC_RBRC, KC_N     ,  KC_M , KC_COMM, KC_DOT ,KC_SLSH, KC_RCTL,
+      KC_LCTL , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B ,LBRACKETS,KC_RALT,     FKEYS  ,RBRACKETS,KC_N     ,  KC_M , KC_COMM, KC_DOT ,KC_SLSH, KC_RCTL,
                                   ADJUST,   KC_LGUI, ALT_ENT,KC_SPC ,NAV,         SYM    , KC_SPC , DESPECIAL,KC_RGUI, KC_APP,
 
       KC_MPRV, KC_MNXT, KC_MPLY, KC_MSTP,    KC_MUTE,                            KC_MPRV, KC_MNXT, KC_MPLY, KC_MSTP,    KC_MUTE
@@ -280,8 +283,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_DESPECIAL] = LAYOUT_myr(
       _______, _______  , _______, _______  , _______, _______,          _______, _______,          _______, _______, _______, _______, _______, _______,
       _______, LCA(KC_Q), _______, LCA(KC_E), _______, _______,          _______, _______,          _______, DE_UDIA, _______, DE_ODIA, _______, _______,
-      _______, DE_ADIA  , DE_SS  , _______  , _______, _______,          _______, _______,          _______, _______, _______, _______, _______, _______,
-      _______, _______  , _______, _______  , _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+      _______, DE_ADIA  , DE_SS  , _______  , _______, _______,          _______, _______,          _______, DE_LABK, DE_RABK, DE_PIPE, DE_BSLS, _______,
+      _______, _______  , _______, _______  , _______, _______, _______, _______, _______, _______, _______, DE_HASH, DE_CIRC, _______, DE_PLUS, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 
       _______, _______, _______, _______,          _______,                   _______, _______, _______, _______,          _______
