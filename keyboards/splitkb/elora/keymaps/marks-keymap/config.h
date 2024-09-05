@@ -29,6 +29,8 @@
 
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES
+#define RGB_MATRIC_SLEEP
+#define RGB_MATRIX_TIMEOUT 60000
 
 // Default is 2, needed because keymap has 7 layers
 #define DYNAMIC_KEYMAP_LAYER_COUNT 9
